@@ -109,7 +109,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="path/to/key.json"
 
 ### 🔗 Access
 
-> [🔗 View Dashboard](https://lookerstudio.google.com/reporting/your-dashboard-id)
+> [🔗 View Dashboard](https://lookerstudio.google.com/s/j-H6A5pSZl0)
 > *(replace with actual URL)*
 
 Includes:
