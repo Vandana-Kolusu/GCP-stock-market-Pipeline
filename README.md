@@ -110,8 +110,8 @@ export ALPHA_VANTAGE_API_KEY="your_api_key_here"
 
 ## 📊 Looker Studio Dashboard
 
-> [🔗 View Dashboard](https://lookerstudio.google.com/reporting/your-dashboard-id)
-> *(Replace with actual URL when available)*
+> [🔗 View Dashboard](https://lookerstudio.google.com/s/ssWD6aPU8dw)
+
 
 ### Dashboard Highlights:
 
@@ -138,12 +138,6 @@ export ALPHA_VANTAGE_API_KEY="your_api_key_here"
 
 **Vandana Kolusu**
 GitHub: [@Vandana-Kolusu](https://github.com/Vandana-Kolusu)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
