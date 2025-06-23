@@ -59,13 +59,6 @@ This project uses the **[Alpha Vantage Stock API](https://www.alphavantage.co/)*
 
 ---
 
-## 🧪 Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Vandana-Kolusu/GCP-stock-market-Pipeline.git
-cd GCP-stock-market-Pipeline
 2. (Optional) Create Virtual Environment
 python3 -m venv venv
 source venv/bin/activate
@@ -85,7 +78,7 @@ Get your free API key and add it to your environment or script config
 
 🔗 Access
 🔗 View Dashboard
-(https://lookerstudio.google.com/s/sg7ASKrTzdg)
+(replace with actual URL)
 Includes:
 
 Daily stock prices and volume
@@ -100,12 +93,3 @@ Future plans: sentiment analysis, anomaly detection, predictive modeling
 
 Vandana Kolusu
 GitHub: @Vandana-Kolusu
-
-📄 License
-
-This project is licensed under the MIT License.
-
-
----
-
-Let me know if you'd like help creating a `requirements.txt`, sample Alpha Vantage data loader, or Looker Studio embed code.
