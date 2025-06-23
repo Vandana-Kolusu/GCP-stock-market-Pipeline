@@ -1,95 +1,165 @@
+
+
+---
+
+```markdown
 # 📈 GCP Stock Market Pipeline
 
-A data pipeline project built using **Google Cloud Platform (GCP)** to fetch, process, and analyze stock market data — visualized using **Looker Studio** for insights and dashboards.
+A cloud-native pipeline to fetch, store, process, and visualize stock market data using the **Alpha Vantage API** and **Google Cloud Platform (GCP)** — with interactive dashboards powered by **Looker Studio**.
 
 ---
 
 ## 🚀 Project Overview
 
-This project automates the collection and analysis of stock market data using GCP services. It ingests data from the Alpha Vantage API, stores it securely, processes it with Python, and visualizes insights through Looker Studio.
+This project automates the process of collecting daily stock market data and generating insights using scalable Google Cloud services. The data is ingested from the Alpha Vantage API, transformed using Python, stored in GCP, and visualized through Looker Studio.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧰 Tech Stack
 
-- **Alpha Vantage API** – for stock market data
-- **Google Cloud Storage (GCS)** – stores raw and cleaned data
-- **Cloud Functions / Cloud Scheduler** – automation and orchestration
-- **BigQuery** – scalable data warehousing and SQL analysis
-- **Looker Studio** – interactive dashboards for data visualization
-- **Python** – data collection and transformation
+| Component          | Tool/Service             |
+|--------------------|--------------------------|
+| Data Source        | [Alpha Vantage API](https://www.alphavantage.co/) |
+| Processing         | Python                   |
+| Storage            | Google Cloud Storage (GCS) |
+| Data Warehouse     | BigQuery                 |
+| Automation         | Cloud Functions, Cloud Scheduler |
+| Visualization      | Looker Studio            |
 
 ---
 
-## 📂 Project Structure
+## 🗂️ Project Structure
+
+```
 
 GCP Stock Market Project/
-│
-├── main.py # Core pipeline logic
-├── Step-by-Step.docx # Documentation of project steps
-├── Errors.docx # Known issues or troubleshooting notes
-├── README.md # Project documentation (this file)
-└── .gitignore # Files to ignore in version control
+├── main.py              # Core script to extract and load stock data
+├── Step-by-Step.docx    # Setup documentation
+├── Errors.docx          # Known issues & resolutions
+├── README.md            # Project overview and documentation
+└── .gitignore           # Git ignore rules
 
+````
 
 ---
 
-## 📡 Data Source: Alpha Vantage Stock API
+## 📡 Data Source: Alpha Vantage API
 
-This project uses the **[Alpha Vantage Stock API](https://www.alphavantage.co/)** to retrieve stock data.
+This project uses the **Alpha Vantage API** to fetch real-time and historical stock data.
 
-- Pulls historical and real-time stock prices (daily/intraday)
 - Endpoints used:
   - `TIME_SERIES_DAILY`
   - `GLOBAL_QUOTE`
-- JSON responses parsed using Python
-- Data stored in **GCS** and analyzed via **BigQuery**
+- Supports symbols like `AAPL`, `GOOGL`, `TSLA`, etc.
+- Response format: JSON
 
-> ⚠️ API Limit: Free tier allows 5 requests/min and 500 requests/day.
-
----
-
-## 📊 Features
-
-- ✅ Fetches live and historical stock data
-- ✅ Stores raw and cleaned data in GCS
-- ✅ Loads processed data into BigQuery
-- ✅ Schedules updates using Cloud Scheduler
-- ✅ Visualizes stock trends in Looker Studio
+📌 **Note:** Free tier allows **5 requests/min** and **500 requests/day**.
 
 ---
 
-2. (Optional) Create Virtual Environment
+## 🔧 Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Vandana-Kolusu/GCP-stock-market-Pipeline.git
+cd GCP-stock-market-Pipeline
+````
+
+### 2. Create a Virtual Environment (Optional)
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-3. Configure GCP
-Enable these services:
-BigQuery
-Cloud Storage
-Cloud Functions
-Cloud Scheduler
-Create a service account and export the credentials:
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/key.json"
-4. Set Up Alpha Vantage
-Sign up at alphavantage.co
-Get your free API key and add it to your environment or script config
-📊 Looker Studio Dashboard
+```
 
-🔗 Access
-🔗 View Dashboard
-(replace with actual URL)
-Includes:
+### 3. Configure GCP
 
-Daily stock prices and volume
-Volatility tracking
-Ticker comparisons with filters
-🚧 Limitations & Future Enhancements
+1. Enable the following APIs:
 
-API rate limits require throttling
-Current support limited to selected stock tickers
-Future plans: sentiment analysis, anomaly detection, predictive modeling
-👩‍💻 Author
+   * BigQuery API
+   * Cloud Storage API
+   * Cloud Functions API
+   * Cloud Scheduler API
 
-Vandana Kolusu
-GitHub: @Vandana-Kolusu
+2. Create a service account with access to:
+
+   * BigQuery Admin
+   * Storage Admin
+   * Cloud Functions Developer
+
+3. Export your service account credentials:
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/key.json"
+```
+
+### 4. Add Your Alpha Vantage API Key
+
+Store your key securely (e.g., using environment variables or a config file):
+
+```bash
+export ALPHA_VANTAGE_API_KEY="your_api_key_here"
+```
+
+---
+
+## 🧠 Core Features
+
+* ✅ Automated data ingestion from Alpha Vantage
+* ✅ Cloud Function to run scheduled updates
+* ✅ Clean and upload data to BigQuery
+* ✅ Create dashboards in Looker Studio
+
+---
+
+## 📊 Looker Studio Dashboard
+
+> [🔗 View Dashboard](https://lookerstudio.google.com/reporting/your-dashboard-id)
+> *(Replace with actual URL when available)*
+
+### Dashboard Highlights:
+
+* Daily stock prices and volume
+* Historical trends and moving averages
+* Compare multiple tickers
+* Filter by date range and ticker symbol
+
+---
+
+## 🚧 Limitations & Future Improvements
+
+* Current implementation limited by Alpha Vantage's free-tier rate limits
+* Only selected tickers are processed
+* Future additions:
+
+  * Intraday support
+  * Sentiment analysis using news APIs
+  * Predictive modeling (e.g., using Vertex AI)
+
+---
+
+## 👩‍💻 Author
+
+**Vandana Kolusu**
+GitHub: [@Vandana-Kolusu](https://github.com/Vandana-Kolusu)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♀️ Questions?
+
+Feel free to open an [issue](https://github.com/Vandana-Kolusu/GCP-stock-market-Pipeline/issues) or contact me via GitHub!
+
+```
+
+---
+
+Let me know if you want me to save this as a file, auto-create the `requirements.txt`, or generate visual diagrams for your architecture.
+```
