@@ -85,7 +85,7 @@ Get your free API key and add it to your environment or script config
 
 🔗 Access
 🔗 View Dashboard
-(replace with actual URL)
+(https://lookerstudio.google.com/s/sg7ASKrTzdg)
 Includes:
 
 Daily stock prices and volume
