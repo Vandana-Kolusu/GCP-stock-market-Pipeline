@@ -23,8 +23,8 @@ This project automates the collection and analysis of stock market data using GC
 
 ## 📂 Project Structure
 
-GCP-stock-market-Pipeline
-/Final.drawio.png
+![GCP Stock Market Pipeline](Final.drawio.png)
+
 ```
 
 
