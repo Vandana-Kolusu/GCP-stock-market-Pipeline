@@ -25,18 +25,6 @@ This project automates the collection and analysis of stock market data using GC
 
 ![GCP Stock Market Pipeline](Final.drawio.png)
 
-```
-
-
-GCP Stock Market Project/
-├── main.py              # Core script to extract and load stock data
-├── Step-by-Step.docx    # Setup documentation
-├── Errors.docx          # Known issues & resolutions
-├── README.md            # Project overview and documentation
-└── .gitignore           # Git ignore rules
-
-````
-
 ---
 
 ## 📡 Data Source: Alpha Vantage API
