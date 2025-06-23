@@ -25,6 +25,8 @@ This project automates the collection and analysis of stock market data using GC
 
 
 ```
+![Final drawio](https://github.com/user-attachments/assets/fb40c9bf-cf82-4180-9d74-f9234f79cd50)
+
 
 GCP Stock Market Project/
 ├── main.py              # Core script to extract and load stock data
