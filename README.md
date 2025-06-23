@@ -1,34 +1,28 @@
-
-
----
-
-```markdown
 # 📈 GCP Stock Market Pipeline
 
-A cloud-native pipeline to fetch, store, process, and visualize stock market data using the **Alpha Vantage API** and **Google Cloud Platform (GCP)** — with interactive dashboards powered by **Looker Studio**.
+A data pipeline project built using **Google Cloud Platform (GCP)** to fetch, process, and analyze stock market data — visualized using **Looker Studio** for insights and dashboards.
 
 ---
 
 ## 🚀 Project Overview
 
-This project automates the process of collecting daily stock market data and generating insights using scalable Google Cloud services. The data is ingested from the Alpha Vantage API, transformed using Python, stored in GCP, and visualized through Looker Studio.
+This project automates the collection and analysis of stock market data using GCP services. It ingests data from the Alpha Vantage API, stores it securely, processes it with Python, and visualizes insights through Looker Studio.
 
 ---
 
-## 🧰 Tech Stack
+## 🛠️ Tech Stack
 
-| Component          | Tool/Service             |
-|--------------------|--------------------------|
-| Data Source        | [Alpha Vantage API](https://www.alphavantage.co/) |
-| Processing         | Python                   |
-| Storage            | Google Cloud Storage (GCS) |
-| Data Warehouse     | BigQuery                 |
-| Automation         | Cloud Functions, Cloud Scheduler |
-| Visualization      | Looker Studio            |
+- **Alpha Vantage API** – for stock market data
+- **Google Cloud Storage (GCS)** – stores raw and cleaned data
+- **Cloud Functions / Cloud Scheduler** – automation and orchestration
+- **BigQuery** – scalable data warehousing and SQL analysis
+- **Looker Studio** – interactive dashboards for data visualization
+- **Python** – data collection and transformation
 
 ---
 
-## 🗂️ Project Structure
+## 📂 Project Structure
+
 
 ```
 
